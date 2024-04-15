@@ -183,6 +183,7 @@ def show_post_installation_message(etc_dir, share_dir, bin_dir):
 def main(args):
     if args.dryrun:
         print('Installing autojump to %s (DRYRUN)...' % args.destdir)
+        os.chdir(args.dryrun)
     else:
         print('Installing autojump to %s ...' % args.destdir)
 
